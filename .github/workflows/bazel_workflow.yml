@@ -35,7 +35,4 @@ jobs:
       run: |
         pwd
         ls
-        cd ../
-        ls
-        pwd
         "${GITHUB_WORKSPACE}/bin/bazel" build //...
