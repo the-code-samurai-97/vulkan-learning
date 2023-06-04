@@ -1,16 +1,17 @@
 
 #  vulkan learning 
 
+### Description
 learning the vulkan library  using C++ and bazel build 
 
 ### linux Installation
-vulkan libraries
-    
-    sudo apt install vulkan-tools
-    sudo apt install libvulkan-dev
-    sudo apt install vulkan-validationlayers-dev spirv-tools
-    
-Bazel
+#### 1.vulkan libraries
+```
+sudo apt install vulkan-tools
+sudo apt install libvulkan-dev
+sudo apt install vulkan-validationlayers-dev spirv-tools
+``` 
+#### 2.Bazel
 ```
 sudo apt install apt-transport-https curl gnupg -y
 ```
@@ -25,6 +26,13 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/bazel-archive-keyring.gpg] h
 sudo apt update && sudo apt install bazel
 bazel --version
 ``` 
-### references
+### References
     https://vulkan-tutorial.com/en/
     https://bazel.build/install/ubuntu
+
+### Build
+
+```
+cd vulkan-learning
+bazel build //...
+bazel run code:1_vulkan_window
