@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches: [ "main" ]
+    branches: [ "develop" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "develop" ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -26,11 +26,13 @@ jobs:
 
     - name: Install bazelisk
       run: |
-        curl -LO "https://github.com/bazelbuild/bazel/releases/download/5.3.0/bazel-5.3.0-linux-x86_64"
+        curl -LO "https://github.com/bazelbuild/bazel/releases/download/6.2.1/bazel-6.2.1-linux-x86_64"
         mkdir -p "${GITHUB_WORKSPACE}/bin/"
-        mv bazel-5.3.0-linux-x86_64 "${GITHUB_WORKSPACE}/bin/bazel"
+        mv bazel-6.2.1-linux-x86_64 "${GITHUB_WORKSPACE}/bin/bazel"
         chmod +x "${GITHUB_WORKSPACE}/bin/bazel"
 
     - name: Build
       run: |
+        pwd
+        ls
         "${GITHUB_WORKSPACE}/bin/bazel" build //...
