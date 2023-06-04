@@ -31,7 +31,6 @@ bazel --version
     https://bazel.build/install/ubuntu
 
 ### Build
-
 ```
 cd vulkan-learning
 bazel build //...
