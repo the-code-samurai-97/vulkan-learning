@@ -26,5 +26,5 @@ sudo apt update && sudo apt install bazel
 bazel --version
 ``` 
 ### references
-https://vulkan-tutorial.com/en/
-https://bazel.build/install/ubuntu
+    https://vulkan-tutorial.com/en/
+    https://bazel.build/install/ubuntu
