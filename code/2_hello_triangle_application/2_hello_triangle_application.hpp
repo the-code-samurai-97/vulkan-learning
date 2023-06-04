@@ -9,7 +9,6 @@
 
 class HelloTriangleApplication {
   public:
-    ~HelloTriangleApplication();
     void run() {
         initWindow();
         initVulkan();
@@ -24,7 +23,6 @@ class HelloTriangleApplication {
     void initVulkan();
     void mainLoop();
     void cleanup();
-    void createInstance();
     GLFWwindow *window_;
     VkInstance instance_;
 };
